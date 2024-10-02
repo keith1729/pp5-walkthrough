@@ -28,7 +28,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['8000-keith1729-pp5walkthroug-bihmktdver8.ws-eu116.gitpod.io']
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-keith1729-pp5walkthroug-bihmktdver8.ws-eu116.gitpod.io']
+CSRF_TRUSTED_ORIGINS = [
+    'https://8000-keith1729-pp5walkthroug-bihmktdver8.ws-eu116.gitpod.io']
 
 # Application definition
 
@@ -43,6 +44,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'home',
 ]
 
 MIDDLEWARE = [
@@ -61,12 +63,12 @@ ROOT_URLCONF = 'boutique_ado.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates'],
+        'DIRS': [BASE_DIR / 'templates', BASE_DIR / 'templates' / 'allauth'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
-                'django.template.context_processors.request', # required by allauth
+                'django.template.context_processors.request',  # required by allauth
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
