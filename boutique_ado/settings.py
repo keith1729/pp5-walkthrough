@@ -26,10 +26,11 @@ SECRET_KEY = 'django-insecure-xd)@@*p^ojkcpu!7nc4!u#*(kmwwr^s@)*e4mdirrtk+8wde#!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-keith1729-pp5walkthroug-bihmktdver8.ws-eu116.gitpod.io']
+ALLOWED_HOSTS = ['8000-keith1729-pp5walkthroug-bihmktdver8.ws-eu116.gitpod.io',
+                 '8000-keith1729-pp5walkthroug-rqjb9y69vl0.ws.codeinstitute-ide.net']
 
-CSRF_TRUSTED_ORIGINS = [
-    'https://8000-keith1729-pp5walkthroug-bihmktdver8.ws-eu116.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-keith1729-pp5walkthroug-bihmktdver8.ws-eu116.gitpod.io',
+                        'https://8000-keith1729-pp5walkthroug-rqjb9y69vl0.ws.codeinstitute-ide.net']
 
 # Application definition
 
@@ -45,6 +46,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'home',
+    'products',
 ]
 
 MIDDLEWARE = [
